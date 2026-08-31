@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính sách bảo mật - Palm River</title>
+    <style>
+      :root {
+        --color-brand: #1c3a2e;
+        --color-gold-dark: #a9822f;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+        color: var(--color-brand);
+        background: #ffffff;
+        line-height: 1.7;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 32px 24px 80px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--color-gold-dark);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 32px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-size: 18px;
+        margin-top: 32px;
+        color: var(--color-gold-dark);
+      }
+      p {
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="back-link" id="backLink">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        Quay lại
+      </a>
+
+      <h1>Chính sách bảo mật</h1>
+      <p>Áp dụng cho website dự án Palm River.</p>
+
+      <h2>1. Thông tin thu thập</h2>
+      <p>
+        Chúng tôi thu thập họ tên, số điện thoại quý khách cung cấp qua các biểu mẫu đăng ký nhận
+        tư vấn trên website nhằm mục đích liên hệ cung cấp thông tin dự án Palm River.
+      </p>
+
+      <h2>2. Mục đích sử dụng</h2>
+      <p>
+        Thông tin được sử dụng để chuyên viên tư vấn liên hệ, gửi bảng giá, chính sách bán hàng và
+        các thông tin liên quan đến dự án Palm River. Chúng tôi không chia sẻ thông tin cho bên thứ
+        ba ngoài mục đích nêu trên.
+      </p>
+
+      <h2>3. Bảo mật thông tin</h2>
+      <p>
+        Mọi thông tin quý khách cung cấp được bảo mật và chỉ đội ngũ kinh doanh dự án Palm River
+        được quyền truy cập.
+      </p>
+
+      <h2>4. Liên hệ</h2>
+      <p>Mọi thắc mắc về chính sách bảo mật, vui lòng liên hệ hotline tư vấn của dự án.</p>
+    </div>
+
+    <script>
+      document.getElementById("backLink").addEventListener("click", function (e) {
+        e.preventDefault();
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = "/";
+        }
+      });
+    </script>
+  </body>
+</html>
