@@ -62,7 +62,7 @@ function useLightbox() {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Img — tự dò đuôi ảnh, placeholder khi không có ảnh thật                     */
+/* Img - tự dò đuôi ảnh, placeholder khi không có ảnh thật                     */
 /* -------------------------------------------------------------------------- */
 
 const EXTENSIONS = ["jpg", "jpeg", "png", "webp", "avif", "gif"];
@@ -429,7 +429,7 @@ function ProjectInfo({ data }) {
             {data.highlights.map((h) => (
               <div
                 key={h.label}
-                className="group aspect-square w-full max-w-[210px] rounded-full border-2 border-gold bg-brand flex flex-col items-center justify-center text-center p-4 transition-all duration-300 hover:bg-gold hover:scale-105 hover:shadow-xl cursor-default"
+                className="group aspect-square w-full max-w-[250px] rounded-full border-2 border-gold bg-brand flex flex-col items-center justify-center text-center p-4 transition-all duration-300 hover:bg-gold hover:scale-105 hover:shadow-xl cursor-default"
               >
                 <p className="text-gold text-xs font-semibold uppercase tracking-wide group-hover:text-brand transition-colors">
                   {h.label}
@@ -614,7 +614,7 @@ function LeadFormSection({ id, data }) {
               <i className="fa-solid fa-phone text-lg" />
               Hotline
             </p>
-            <a href={`tel:${data.hotline}`} className="text-white font-serif text-2xl font-bold">
+            <a href={`tel:${data.hotline.replace(/\s/g, "")}`} className="text-white font-serif text-2xl font-bold">
               {data.hotline}
             </a>
             <p className="text-white/50 text-xs mt-1">{data.note}</p>
@@ -727,7 +727,7 @@ function Differences({ data }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Amenities — carousel tự động                                               */
+/* Amenities - carousel tự động                                               */
 /* -------------------------------------------------------------------------- */
 
 function Amenities({ data }) {
@@ -1174,31 +1174,35 @@ function FAQ({ data }) {
 
 function Consultant({ data }) {
   return (
-    <section className="bg-brand/[0.03] py-20 px-6 md:px-12">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-[470px_1fr] gap-12 items-center">
-        <div className="rounded-2xl overflow-hidden shadow-lg md:-ml-6 aspect-square animate-fade-up">
-          <Img src={data.image} className="w-full h-full object-cover" />
+    <section className="bg-[#f5f3ef] py-20 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14 animate-fade-up">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand uppercase">{data.title}</h2>
+          <div className="w-16 h-1 bg-gold rounded-full mx-auto mt-5" />
         </div>
-        <div className="animate-fade-up">
-          <p className="text-gold-dark uppercase tracking-widest text-sm font-semibold mb-2">{data.title}</p>
-          <h3 className="font-serif text-2xl md:text-3xl font-bold text-brand mb-1">{data.name}</h3>
-          <p className="text-gold-dark uppercase text-sm font-semibold tracking-wide mb-4">{data.role}</p>
-          <div className="space-y-3 mb-6">
-            {data.description.map((p, i) => (
-              <p key={i} style={longTextStyle} className="text-brand/65">
-                {p}
-              </p>
-            ))}
+
+        <div className="grid md:grid-cols-[420px_1fr] gap-12 items-start">
+          <div className="rounded-2xl overflow-hidden shadow-lg aspect-4/5 animate-fade-up">
+            <Img src={data.image} className="w-full h-full object-cover" />
           </div>
-          <a
-            href={`tel:${data.phone}`}
-            className="inline-flex items-center gap-3 rounded-full bg-brand text-white px-6 py-3 font-semibold hover:bg-brand-light transition-colors"
-          >
-            <span className="w-8 h-8 rounded-full bg-gold flex items-center justify-center shrink-0">
-              <i className="fa-solid fa-phone text-brand text-sm" />
-            </span>
-            {data.phone}
-          </a>
+          <div className="animate-fade-up">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-brand mb-1">{data.name}</h3>
+            <p className="text-gold-dark uppercase text-sm font-semibold tracking-wide mb-6">{data.role}</p>
+            <div className="space-y-4 mb-8">
+              {data.description.map((p, i) => (
+                <p key={i} style={longTextStyle} className="text-brand/70">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <a
+              href={`tel:${data.phone.replace(/\s/g, "")}`}
+              className="inline-flex items-center gap-3 rounded-full bg-brand text-white px-6 py-3.5 font-semibold hover:bg-brand-light transition-colors"
+            >
+              <i className="fa-solid fa-phone text-gold" />
+              Gọi tư vấn: {data.phone}
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1223,7 +1227,7 @@ function Footer({ data, logoGroup }) {
 
         <div className="text-left md:text-right">
           <p className="text-brand/60 text-sm">Hotline</p>
-          <a href={`tel:${data.hotline}`} className="text-gold-dark font-bold text-lg">
+          <a href={`tel:${data.hotline.replace(/\s/g, "")}`} className="text-gold-dark font-bold text-lg">
             {data.hotline}
           </a>
         </div>
@@ -1263,57 +1267,65 @@ function ZaloIcon({ className }) {
 function FloatingCTAs({ zalo, onOpenPopup }) {
   const [collapsed, setCollapsed] = useState(false);
 
+  if (collapsed) {
+    return (
+      <div className="fixed bottom-4 left-4 z-40 w-[calc(100%-2rem)] max-w-sm">
+        <button
+          type="button"
+          onClick={() => setCollapsed(false)}
+          aria-label="Mở rộng"
+          className="h-7 w-12 rounded-full bg-black/35 hover:bg-black/50 backdrop-blur-md ring-1 ring-white/30 flex items-center justify-center cursor-pointer transition-colors"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-white stroke-[2.5]">
+            <path d="M18 15l-6-6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="fixed bottom-4 left-4 z-40 w-[calc(100%-2rem)] max-w-sm">
       <div className="relative rounded-3xl bg-white/20 backdrop-blur-md ring-1 ring-white/30 shadow-xl p-3 pt-5 flex flex-col gap-2">
         <button
           type="button"
-          onClick={() => setCollapsed((c) => !c)}
-          aria-label={collapsed ? "Mở rộng" : "Thu gọn"}
+          onClick={() => setCollapsed(true)}
+          aria-label="Thu gọn"
           className="absolute -top-3 left-1/2 -translate-x-1/2 h-7 w-12 rounded-full bg-black/35 hover:bg-black/50 backdrop-blur-md ring-1 ring-white/30 flex items-center justify-center cursor-pointer transition-colors"
         >
-          <svg
-            viewBox="0 0 24 24"
-            className={`h-4 w-4 fill-none stroke-white stroke-[2.5] transition-transform duration-300 ${
-              collapsed ? "rotate-180" : ""
-            }`}
-          >
+          <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-white stroke-[2.5]">
             <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
 
-        {!collapsed && (
-          <>
-            <a
-              href={zalo}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full flex items-center justify-center gap-2.5 py-2.5 px-5 rounded-full text-base font-bold text-white shadow-lg shadow-black/30 hover:brightness-110 transition"
-              style={{ backgroundColor: "#0068ff" }}
-            >
-              <ZaloIcon className="h-6 w-6" />
-              TƯ VẤN QUA ZALO VỚI CEO
-            </a>
+        <a
+          href={zalo}
+          target="_blank"
+          rel="noreferrer"
+          className="w-full flex items-center justify-center gap-2.5 py-2.5 px-5 rounded-full text-base font-bold text-white shadow-lg shadow-black/30 hover:brightness-110 transition"
+          style={{ backgroundColor: "#0068ff" }}
+        >
+          <ZaloIcon className="h-6 w-6" />
+          TƯ VẤN QUA ZALO VỚI CEO
+        </a>
 
-            <button
-              type="button"
-              onClick={onOpenPopup}
-              className="w-full flex items-center justify-center gap-2.5 py-2.5 px-5 rounded-full text-base font-bold text-white shadow-lg shadow-black/30 hover:brightness-110 transition cursor-pointer"
-              style={{ backgroundColor: "#e11d2a" }}
-            >
-              <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-white stroke-2">
-                <path
-                  d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path d="M14 2v5h5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M8 13h8M8 17h5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              TẢI GIỎ HÀNG ĐỘC QUYỀN ĐỢT 1
-            </button>
-          </>
-        )}
+        <button
+          type="button"
+          onClick={onOpenPopup}
+          className="w-full flex items-center justify-center gap-2.5 py-2.5 px-5 rounded-full text-base font-bold text-white shadow-lg shadow-black/30 hover:brightness-110 transition cursor-pointer"
+          style={{ backgroundColor: "#e11d2a" }}
+        >
+          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-white stroke-2">
+            <path
+              d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path d="M14 2v5h5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8 13h8M8 17h5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          TẢI GIỎ HÀNG ĐỘC QUYỀN ĐỢT 1
+        </button>
       </div>
     </div>
   );

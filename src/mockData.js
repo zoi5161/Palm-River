@@ -48,7 +48,7 @@ const mockData = {
   cta: {
     title: "ĐĂNG KÝ NHẬN BẢNG GIÁ & CHÍNH SÁCH BÁN HÀNG MỚI NHẤT",
     subtitle: "Để lại thông tin để chuyên viên tư vấn Palm River liên hệ hỗ trợ trong thời gian sớm nhất.",
-    hotline: "[ĐIỀN: số hotline thật]",
+    hotline: "0919 361 363",
     note: "Hotline tư vấn 24/7",
   },
   location: {
@@ -312,14 +312,16 @@ const mockData = {
     ],
   },
   consultant: {
-    title: "NGƯỜI TƯ VẤN",
+    title: "AI SẼ LÀ NGƯỜI TƯ VẤN CHO QUÝ KHÁCH?",
     image: "/images/tu-van",
-    name: "[ĐIỀN: Họ và tên]",
-    role: "Chuyên viên tư vấn dự án Palm River",
-    phone: "[ĐIỀN: số điện thoại thật]",
+    name: "Trương Duy Hiếu",
+    role: "Giám Đốc Điều Hành",
+    phone: "0919 361 363",
     description: [
-      "Với kinh nghiệm tư vấn bất động sản khu Đông TP.HCM, tôi cam kết đồng hành và mang đến những thông tin chính xác, minh bạch nhất về dự án Palm River.",
-      "Hãy liên hệ để được tư vấn chi tiết về chính sách bán hàng, bảng giá và pháp lý dự án.",
+      "Tôi có nhiều năm kinh nghiệm tư vấn các dự án bất động sản cao tầng và khu đô thị quy mô lớn tại khu Đông TP.HCM, đồng hành cùng hàng trăm khách hàng trong hành trình an cư và đầu tư.",
+      "Tại Palm River, tôi đã hỗ trợ nhiều khách hàng lựa chọn được sản phẩm phù hợp - từ Studio, căn hộ 1-2 phòng ngủ đến Penthouse, Shophouse - dựa trên đúng nhu cầu ở thực và mục tiêu đầu tư của từng người.",
+      "Theo tôi đánh giá, Palm River sở hữu vị trí giao điểm trung tâm hiếm có của khu Đông, chỉ 10 phút tới Trung tâm Tài chính Thủ Thiêm (IFC). Dự án hiện mới mở bán giai đoạn đầu, dư địa tăng giá còn rất lớn.",
+      "Hãy liên hệ ngay để được tư vấn chi tiết về chính sách thanh toán, chọn căn phù hợp và nhận giỏ hàng độc quyền sớm nhất. Quý khách có thể gọi ngay để được hỗ trợ:",
     ],
   },
   popup: {
@@ -330,11 +332,11 @@ const mockData = {
       { label: "Vị trí", value: "10 phút", sub: "tới Thủ Thiêm IFC" },
     ],
   },
-  zalo: "https://zalo.me/[ĐIỀN số điện thoại]",
+  zalo: "https://zalo.me/0919361363",
   footer: {
     company: "Hướng Việt Properties",
     address: "Dự án Palm River, Phường Bình Trưng, TP. Hồ Chí Minh",
-    hotline: "[ĐIỀN: số hotline thật]",
+    hotline: "0919 361 363",
     copyright: "© 2026 Palm River. Mọi quyền được bảo lưu.",
   },
   theme: {
