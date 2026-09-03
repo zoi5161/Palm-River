@@ -315,7 +315,7 @@ const mockData = {
     title: "AI SẼ LÀ NGƯỜI TƯ VẤN CHO QUÝ KHÁCH?",
     image: "/images/tu-van",
     name: "Trương Duy Hiếu",
-    role: "Giám Đốc Điều Hành",
+    role: "Tổng Giám Đốc",
     phone: "0919 361 363",
     description: [
       "Tôi có nhiều năm kinh nghiệm tư vấn các dự án bất động sản cao tầng và khu đô thị quy mô lớn tại khu Đông TP.HCM, đồng hành cùng hàng trăm khách hàng trong hành trình an cư và đầu tư.",
