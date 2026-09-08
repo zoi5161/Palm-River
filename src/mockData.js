@@ -13,23 +13,30 @@ const mockData = {
   ],
   heroImage: "/images/hero",
   longDescription: [
-    "Palm River là dự án căn hộ cao tầng kết hợp thương mại - dịch vụ do Hướng Việt Properties phát triển, tọa lạc tại Phường Bình Trưng, TP.HCM - ngay giao điểm trung tâm kết nối mọi tiện ích một cách nhanh chóng. Lấy cảm hứng từ biểu tượng của nước, Palm River kiến tạo một phong cách sống an yên nhưng không ngừng chuyển động, nơi mỗi ngày đều mở ra những trải nghiệm mới mẻ và giàu cảm hứng.",
-    "Từ những mảng xanh mang đến sự thư thái và tái tạo năng lượng, đến thiết kế lấy cảm hứng từ dòng chảy cùng những không gian sống rộng mở, mỗi góc nhỏ tại Palm River đều được nuôi dưỡng bởi nhịp điệu hài hoà của nước, mang đến nguồn năng lượng tích cực và một chuẩn mực sống vượt trên những điều quen thuộc.",
+    "Palm River là phân khu căn hộ cao tầng mới nhất thuộc khu đô thị tích hợp Palm City, do Hướng Việt Properties (HVP) và Công ty TNHH Nam Rạch Chiếc phát triển, tọa lạc tại Phường Bình Trưng, TP.HCM - liền kề Trung tâm Tài chính Quốc tế Thủ Thiêm. Lấy cảm hứng từ biểu tượng của nước, Palm River kiến tạo một phong cách sống an yên nhưng không ngừng chuyển động, nơi mỗi ngày đều mở ra những trải nghiệm mới mẻ và giàu cảm hứng.",
+    "Với ngôn ngữ thiết kế Biophilic kết hợp Wabi-Sabi theo triết lý 'Unified Living System', Palm River kiến tạo không gian sống nơi kiến trúc, thiên nhiên và con người cùng tồn tại trong cân bằng. Dự án hướng tới chứng nhận công trình xanh EDGE, tiết kiệm tối thiểu 20% năng lượng, nước và vật liệu xây dựng.",
   ],
   infoTitle: "Thông tin tổng quan dự án",
   info: [
-    { label: "Tên dự án", value: "Palm River" },
-    { label: "Chủ đầu tư / Phát triển", value: "Hướng Việt Properties" },
-    { label: "Vị trí", value: "Phường Bình Trưng, TP. Hồ Chí Minh" },
-    { label: "Loại hình dự án", value: "Nhà ở chung cư cao tầng kết hợp thương mại - dịch vụ" },
+    { label: "Tên dự án", value: "Palm River (thuộc khu đô thị Palm City)" },
+    { label: "Chủ đầu tư / Phát triển", value: "Hướng Việt Properties (HVP) · Công ty TNHH Nam Rạch Chiếc" },
+    { label: "Vị trí", value: "Đường Song Hành, Phường Bình Trưng, TP. Hồ Chí Minh" },
+    { label: "Loại hình dự án", value: "Phân khu căn hộ cao tầng kết hợp thương mại - dịch vụ thuộc khu đô thị Palm City" },
+    { label: "Diện tích khu đất Palm City", value: "~30,2 - 30,6 ha · mật độ xây dựng ~40%" },
     { label: "Quy mô dự án", value: "4 tòa tháp · 36 tầng nổi · 2 tầng hầm" },
-    { label: "Loại hình căn hộ", value: "Studio · 1PN · 2PN · Duplex · Penthouse · Shophouse" },
+    { label: "Loại hình căn hộ", value: "Studio · 1PN · 2PN · 3PN · Duplex · Penthouse · Shophouse" },
+    { label: "Diện tích căn hộ", value: "34,86 m² - trên 300 m²" },
+    { label: "Mật độ căn hộ", value: "4-6 căn/tầng · nhiều căn góc · 4-5 thang máy/tòa" },
+    { label: "Tỷ lệ chỗ đậu xe", value: "1:1 (1 căn hộ - 1 chỗ đậu xe)" },
     { label: "Hình thức sở hữu", value: "Sở hữu lâu dài (áp dụng khách hàng quốc tịch Việt Nam)" },
-    { label: "Đơn vị thiết kế", value: "DPA - DP Architects" },
-    { label: "Tổng thầu xây dựng", value: "Dark Horse" },
-    { label: "Đơn vị cơ điện", value: "M&E Engineering" },
-    { label: "Đơn vị cảnh quan", value: "LJ Group" },
-    { label: "Quản lý dự án / vận hành", value: "Core Project Management · Ardor Group" },
+    { label: "Đơn vị thiết kế kiến trúc", value: "DPA" },
+    { label: "Đơn vị thiết kế nội thất", value: "Dark Horse" },
+    { label: "Đơn vị cảnh quan", value: "LJ-Group (Brazil, hơn 30 năm kinh nghiệm)" },
+    { label: "Đơn vị công trình xanh", value: "Ardor Green (hướng tới chứng nhận EDGE)" },
+    { label: "Quản lý dự án", value: "Core" },
+    { label: "Khởi công dự kiến", value: "Tháng 6/2026" },
+    { label: "Bàn giao dự kiến", value: "Quý I/2029" },
+    { label: "Quy hoạch", value: "Đã phê duyệt quy hoạch chi tiết 1/500" },
   ],
   salesPolicy: {
     title: "CHÍNH SÁCH BÁN HÀNG",
@@ -43,7 +50,7 @@ const mockData = {
     { label: "Quy mô", value: "4 tòa tháp" },
     { label: "Tầng nổi", value: "36 tầng" },
     { label: "Tầng hầm", value: "2 tầng" },
-    { label: "Diện tích sàn TM", value: "286.000 m²" },
+    { label: "Tiện ích nội khu", value: "40+ tiện ích" },
   ],
   cta: {
     title: "ĐĂNG KÝ NHẬN BẢNG GIÁ & CHÍNH SÁCH BÁN HÀNG MỚI NHẤT",
@@ -54,7 +61,7 @@ const mockData = {
   location: {
     title: "VỊ TRÍ DỰ ÁN",
     paragraphs: [
-      "Palm River tọa lạc ngay giao điểm trung tâm của khu Đông thành phố, sở hữu hạ tầng giao thông hiện đại, thuận tiện kết nối mọi tiện ích một cách nhanh chóng.",
+      "Palm River tọa lạc tại đường Song Hành, Phường Bình Trưng, liền kề Trung tâm Tài chính Quốc tế Thủ Thiêm và ngay giao điểm trung tâm của khu Đông thành phố, sở hữu hạ tầng giao thông hiện đại, thuận tiện kết nối mọi tiện ích một cách nhanh chóng.",
       "Từ dự án, cư dân chỉ mất 1 phút tới Ga Bình Trưng, 3 phút tới Nút giao An Phú và Đường sắt cao tốc Bắc - Nam, 3 phút tới Cao tốc Long Thành - Dầu Giây, 30 phút tới Sân bay Quốc tế Long Thành.",
     ],
     image: "/images/vi-tri",
@@ -121,7 +128,7 @@ const mockData = {
   amenities: {
     title: "HỆ TIỆN ÍCH",
     paragraphs: [
-      "Palm River kiến tạo hệ sinh thái tiện ích 2 tầng độc đáo - tiện ích ngoài trời tầng 1 và tiện ích nội khu tầng 2 - mang đến trải nghiệm nghỉ dưỡng ngay tại nhà.",
+      "Palm River kiến tạo hệ sinh thái hơn 40 tiện ích thủy dưỡng nội khu - từ hồ bơi, phòng gym đến các không gian thư giãn ven sông - mang đến trải nghiệm nghỉ dưỡng ngay tại nhà, kết nối liền mạch với công viên ven sông dài khoảng 3km của khu đô thị Palm City.",
     ],
     images: [
       { src: "/images/tien-ich-1", caption: "Hồ bơi dài 70m" },
@@ -156,8 +163,8 @@ const mockData = {
   design: {
     title: "THIẾT KẾ SẢN PHẨM",
     paragraphs: [
-      "Thiết kế đương đại giao hòa với thiên nhiên - mỗi căn hộ Palm River được chăm chút từ không gian phòng khách, bếp, phòng ngủ đến phòng tắm, mang phong cách sang trọng, ấm áp và tinh tế.",
-      "Vật liệu cao cấp, ánh sáng tự nhiên và view sông được tối ưu trong từng căn hộ, tạo nên trải nghiệm sống đẳng cấp và bền vững theo thời gian.",
+      "Palm River theo đuổi ngôn ngữ thiết kế Biophilic kết hợp Wabi-Sabi - mỗi căn hộ được chăm chút từ không gian phòng khách, bếp, phòng ngủ đến phòng tắm, mang phong cách sang trọng, ấm áp và gần gũi thiên nhiên.",
+      "Vật liệu hoàn thiện đạt chuẩn E1 an toàn cho sức khỏe, hệ thống lọc nước hai giai đoạn kết hợp UV, ánh sáng tự nhiên và view sông được tối ưu trong từng căn hộ, hướng tới chứng nhận công trình xanh EDGE.",
     ],
     images: ["/images/thiet-ke-1", "/images/thiet-ke-2"],
   },
@@ -256,12 +263,12 @@ const mockData = {
       {
         title: "Chủ đầu tư uy tín, đội ngũ phát triển chuyên nghiệp",
         description:
-          "Hướng Việt Properties cùng các đối tác thiết kế - thi công hàng đầu: DPA, Dark Horse, LJ Group, Core Project Management.",
+          "Hướng Việt Properties (HVP) cùng các đối tác thiết kế - thi công hàng đầu: kiến trúc DPA, nội thất Dark Horse, cảnh quan LJ-Group, quản lý dự án Core.",
       },
       {
         title: "Hệ tiện ích nghỉ dưỡng đẳng cấp resort",
         description:
-          "Hồ bơi dài 70m, công viên xanh, sân thể thao và tiện ích nội khu đầy đủ ngay trong khuôn viên dự án.",
+          "Hơn 40 tiện ích thủy dưỡng nội khu cùng công viên ven sông dài khoảng 3km của khu đô thị Palm City ngay trong khuôn viên sinh sống.",
       },
       {
         title: "Đa dạng sản phẩm, phù hợp mọi nhu cầu",
@@ -314,8 +321,8 @@ const mockData = {
   consultant: {
     title: "AI SẼ LÀ NGƯỜI TƯ VẤN CHO QUÝ KHÁCH?",
     image: "/images/tu-van",
-    name: "Trương Duy Hiếu",
-    role: "Tổng Giám Đốc",
+    name: "Mr. Hiếu",
+    role: "CEO KingsLand",
     phone: "0919 361 363",
     description: [
       "Tôi có nhiều năm kinh nghiệm tư vấn các dự án bất động sản cao tầng và khu đô thị quy mô lớn tại khu Đông TP.HCM, đồng hành cùng hàng trăm khách hàng trong hành trình an cư và đầu tư.",
@@ -335,7 +342,7 @@ const mockData = {
   zalo: "https://zalo.me/0919361363",
   footer: {
     company: "Hướng Việt Properties",
-    address: "Dự án Palm River, Phường Bình Trưng, TP. Hồ Chí Minh",
+    address: "Đường Song Hành, Phường Bình Trưng, TP. Hồ Chí Minh",
     hotline: "0919 361 363",
     copyright: "© 2026 Palm River. Mọi quyền được bảo lưu.",
   },
